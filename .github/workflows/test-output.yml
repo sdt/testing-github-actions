@@ -13,10 +13,9 @@ jobs:
       - uses: actions/checkout@v3
       - id: step1
         run: echo "test=hello" >> "$GITHUB_OUTPUT"
-      - run: ls -alF
-      - run: ./show-env.sh
       - id: step2
         run: echo "test=world" >> "$GITHUB_OUTPUT"
+      - run: ./show-env.sh
   job2:
     runs-on: [self-hosted, sdt]
     needs: job1

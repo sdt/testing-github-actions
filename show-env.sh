@@ -1,3 +1,5 @@
 #!/bin/bash
 
-env | sort
+echo Github output=$GITHUB_OUTPUT
+cat $GITHUB_OUTPUT
+echo ---
